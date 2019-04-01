@@ -11,10 +11,14 @@ gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-ge
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# Bootstrap 4 gem
+gem 'bootstrap', '~> 4.3.1'
+# Jquery gem
+gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'duktape'
+#gem 'duktape'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

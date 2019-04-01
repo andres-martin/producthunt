@@ -1,18 +1,23 @@
-<h1>Hello World!</h1>
-
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>URL</th>
-        <th>Description</th>
-    </tr>
-    <% @products.each do |product| %>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Products</h1>
+      <table class="table">
         <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>URL</th>
+          <th>Description</th>
+        </tr>
+        <% @products.each do |product| %>
+          <tr>
             <td><%= product.id %></td>
             <td><%= product.name %></td>
             <td><%= product.url %></td>
             <td><%= product.description %></td>
-        </tr>
-    <% end %>
-</table>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
