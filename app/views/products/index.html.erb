@@ -19,7 +19,10 @@
             <td><%= link_to product.name, product %></td>
             <td><%= product.url %></td>
             <td><%= product.description %></td>
-            <td><%= link_to "Edit", edit_product_path(product) %></td>
+            <td>
+              <%= link_to "Edit", edit_product_path(product) %>
+              <%= link_to "Delete", product, method: :delete, data: { confirm: "Are you Sure?"} %>
+            </td>
           </tr>
         <% end %>
       </table>
