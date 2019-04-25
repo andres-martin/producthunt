@@ -1,10 +1,10 @@
-<div class="container mt-5">
+<div class="container">
   <div class="row">
     <div class="col-sm-12">
       <h1>Products</h1>
       <% if signed_in? %>
         <div class="text-right">
-          <%= link_to 'Publish Product', new_product_path, class: "btn btn-primary mt-2 mb-3" %>
+          <%= link_to 'Publish Product', new_product_path, class: "btn btn-primary" %>
         </div>
       <% end %>
       <table class="table">
