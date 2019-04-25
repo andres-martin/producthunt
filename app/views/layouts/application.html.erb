@@ -13,6 +13,9 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
+    <% if signed_in? %>
+      <div>Hi <%= current_user.name %> <%= link_to 'Exit', logout_path, method: :delete %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
