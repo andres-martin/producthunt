@@ -13,8 +13,11 @@
 
 class User < ApplicationRecord
     has_secure_password validations: false
+    
     has_many :products
     has_many :comments
+    has_many :votes
+
     validates :email, uniqueness: true, format: /@/
     validates :password, presence: true, on: :create
     validates :password, length: {minimum:6, maximum:20}, allow_nil: true 
