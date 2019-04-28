@@ -1,4 +1,6 @@
 class VotesController < ApplicationController
+    # agrega beforeaction private access para redirecionar users no logged in
+    before_action :private_access
     def create
         product = Product.find(params[:product_id])
         product.votes.create(user: current_user)
