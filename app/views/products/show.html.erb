@@ -1,5 +1,5 @@
 <div class="product-page">
-  <header class="product-header">
+  <header class="product-header" <%= header_style %>>
     <h1><%= @product.name %></h1>
     <p><%= @product.description %></p>
     <a href="<%= @product.url %>" class="btn btn-primary btn-lg" target="_blank">¡Obtenlo!</a>
@@ -17,7 +17,7 @@
           <h2>Votos</h2>
           <% @product.votes.each do |vote| %>
             <img src="<%= Gravatar.new("#{vote.user.email}").image_url %>" class="img-circle" />
-  <% end %>
+<% end %>
 </div>
 <div class="comments">
   <h2>Comentarios</h2>
