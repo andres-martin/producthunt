@@ -35,6 +35,9 @@ gem 'xmlrpc'
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 gem "image_processing", "~> 1.2"
+# S3 aws gem
+
+gem "aws-sdk-s3", require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
