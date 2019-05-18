@@ -37,7 +37,7 @@ gem 'mini_magick', '~> 4.8'
 gem "image_processing", "~> 1.2"
 # S3 aws gem
 
-gem "aws-sdk-s3", require: false
+gem "aws-sdk-s3", '< 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
