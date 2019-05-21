@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <p>Hola,</p>
+    <p>Estos fueron los productos más votados el día de ayer:</p>
+    <ol>
+      <% @products.each do |product| %>
+        <li><%= link_to product.name, product_url(product) %>: <%= product.description %></li>
+      <% end %>
+    </ol>
+    <p>Esperamos que tengas un día lleno de productos digitales ;)</p>
+  </body>
+</html>

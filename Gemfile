@@ -38,6 +38,7 @@ gem "image_processing", "~> 1.2"
 # S3 aws gem
 
 gem "aws-sdk-s3", '~> 1.0.0.rc2'
+gem "figaro"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
