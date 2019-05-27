@@ -9,6 +9,8 @@
 #  twitter_handle  :string(50)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  reset_digest    :string
+#  reset_sent_at   :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

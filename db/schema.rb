@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_203702) do
+ActiveRecord::Schema.define(version: 2019_05_27_010308) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 2019_04_28_203702) do
     t.string "twitter_handle", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
   create_table "votes", force: :cascade do |t|
