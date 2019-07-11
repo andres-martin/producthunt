@@ -12,6 +12,12 @@
           <%= link_to '(forgot password?)', new_password_reset_path %>
           <%= password_field_tag(:password, nil, class: 'form-control input-lg') %>
         </div>
+        <!-- remember me not working -->
+        <div class="form-group">
+          <%= check_box_tag( :remember_me, 1)%>
+          <%= label_tag(:remember_me, "Remember me on this computer")%>
+        </div>
+        <!--end-->
         <div class="text-right"><%= submit_tag("Ingresar", class: 'btn btn-primary btn-lg btn-block') %></div>
       <% end %>
     </div>

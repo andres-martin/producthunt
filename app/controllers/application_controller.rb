@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
     end
 
     def sign_out
+        current_user.forget
         cookies.delete(:user_id)
         @current_user = nil
     end
@@ -17,11 +18,31 @@ class ApplicationController < ActionController::Base
         end
         helper_method :signed_in?
 
+        # original code current_user method
         def current_user
             @current_user ||= User.find(cookies.signed[:user_id]) if cookies.signed[:user_id]
             rescue ActiveRecord::RecordNotFound
+        ## experimental validation !!!
+            if user && user.authenticated?(:remember, cookies[:remember_token])
+                sign_in(user)
+                @current_user = user
+            end
         end
-        helper_method :current_user    
+        
+        ##code from advanced login chapter 9.9
+    #   def current_user
+    #       if (user_id = session[:user_id])
+    #           @current_user ||= User.find_by(id: user_id)
+    #       elsif (user_id = cookies.signed[:user_id])
+    #           user = User.find_by(id: user_id)
+    #           if user && user.authenticated?(cookies[:remember_token])
+    #               sign_in(user)
+    #               @current_user = user
+    #           end
+    #       end
+    #   end  
+    
+      helper_method :current_user  
 
         def private_access
             redirect_to :login unless signed_in?

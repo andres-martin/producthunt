@@ -11,6 +11,7 @@
 #  updated_at      :datetime         not null
 #  reset_digest    :string
 #  reset_sent_at   :datetime
+#  remember_digest :string
 #
 
 require 'test_helper'
