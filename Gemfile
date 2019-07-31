@@ -33,7 +33,7 @@ gem 'gravatar-ultimate'
 gem 'annotate'
 gem 'xmlrpc'
 # Use ActiveStorage variant
-gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.9'
 gem "image_processing", "~> 1.2"
 # S3 aws gem
 
